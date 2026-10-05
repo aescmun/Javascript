@@ -1,5 +1,5 @@
 let edad = Number(prompt("¿Cuántos años tienes?"));
-let nota = Number(prompt("¿Cuál es tu nota media? (con 3 decimales, ej: 7.354)"));
+let nota = Number(prompt("¿Cuál es tu nota media?"));
 
 // f) 
 if (!Number.isFinite(edad) || !Number.isFinite(nota)) {
