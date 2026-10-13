@@ -1,15 +1,15 @@
 class Libro{
   constructor(titulo, autor, numeroPaginas){
     if(titulo === null || titulo === undefined || titulo === ""){
-      throw new error("El titulo no puede estar vacio")
+      throw new Error("El titulo no puede estar vacio")
     }
 
     if(autor === null || autor === undefined || autor === ""){
-      throw new error("El autor no puede estar vacio")
+      throw new Error("El autor no puede estar vacio")
     }
 
     if(isNaN(numeroPaginas) || numeroPaginas <= 0){
-      throw new error("No puede tener paginas invalidas")
+      throw new Error("No puede tener paginas invalidas")
     }
 
     this.titulo = titulo;
