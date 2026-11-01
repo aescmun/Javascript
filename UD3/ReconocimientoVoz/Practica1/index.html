@@ -6,13 +6,13 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      font-size: medium; 
+      font-size: 16px;
       transition: background-color 0.5s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
     }
     .card {
@@ -27,6 +27,9 @@
       color: #007bff;
       margin-top: 1rem;
     }
+    .botones button {
+      margin: 0.2rem;
+    }
   </style>
 </head>
 <body>
@@ -34,10 +37,23 @@
   <div class="card">
     <h1>Panel de Control por Voz</h1>
     <p>Di ordenes como: <strong>"Rojo"</strong>, <strong>"Verde"</strong>, <strong>"Azul"</strong> o <strong>"Restablecer"</strong>.</p>
-    <p>También puedes cambiar el tamaño y aspecto con: <strong>"Más grande"</strong>, <strong>"Más pequeño"</strong>, <strong>"Modo oscuro</strong> o <strong>Modo claro</strong> </p>
+    <p>También puedes cambiar el tamaño y aspecto con: <strong>"Más grande"</strong>, <strong>"Más pequeño"</strong>, <strong>"Modo oscuro"</strong> o <strong>"Modo claro"</strong>.</p>
     <button id="btnStart">Activar Micrófono</button>
     <p class="status" id="statusText">Estado: Inactivo</p>
     <p>Último comando detectado: <span id="commandText">-</span></p>
+    <p>Respuesta: <span id="respuestaText">-</span></p>
+
+    <p>Si no puedes usar el micrófono, usa los botones:</p>
+    <div class="botones">
+      <button data-comando="rojo">Rojo</button>
+      <button data-comando="verde">Verde</button>
+      <button data-comando="azul">Azul</button>
+      <button data-comando="restablecer">Restablecer</button>
+      <button data-comando="más grande">Más grande</button>
+      <button data-comando="más pequeño">Más pequeño</button>
+      <button data-comando="modo oscuro">Modo oscuro</button>
+      <button data-comando="modo claro">Modo claro</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
