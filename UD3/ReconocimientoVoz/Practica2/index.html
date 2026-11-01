@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de la compra por voz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .status {
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 1rem;
+    }
+    ul {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Lista de la compra por voz</h1>
+    <p>Di frases como: <strong>"Añade leche"</strong>, <strong>"Quita leche"</strong> o <strong>"Vacía la lista"</strong>.</p>
+    <button id="btnStart">Activar Micrófono</button>
+    <p class="status" id="statusText">Estado: Inactivo</p>
+    <p>Última frase detectada: <span id="commandText">-</span></p>
+    <p>Respuesta: <span id="respuestaText">-</span></p>
+
+    <h2>Mi lista</h2>
+    <ul id="lista"></ul>
+
+    <p>Si no puedes usar el micrófono, escribe el producto y usa los botones:</p>
+    <input type="text" id="producto" placeholder="Producto">
+    <button id="btnAñadir">Añadir</button>
+    <button id="btnQuitar">Quitar</button>
+    <button id="btnVaciar">Vaciar lista</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
