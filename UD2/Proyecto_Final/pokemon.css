@@ -1,0 +1,109 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+}
+
+.cabecera{
+    background-color: rgb(204, 0, 0);
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+.cabecera a{
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+input, button{
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+button{
+    cursor: pointer;
+}
+
+main{
+    padding: 1em;
+}
+
+h2{
+    text-align: center;
+}
+
+#listado-pokemon{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.tarjeta{
+    background-color: white;
+    border-radius: 0.8em;
+    padding: 1em;
+    text-align: center;
+}
+
+.tarjeta img{
+    width: 100%;
+}
+
+.tarjeta h3{
+    text-transform: capitalize;
+}
+
+#ficha-pokemon{
+    background-color: white;
+    border-radius: 0.8em;
+    padding: 1em;
+    max-width: 25em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ficha-pokemon h2, #ficha-pokemon li{
+    text-transform: capitalize;
+}
+
+#ficha-pokemon ul{
+    list-style: none;
+    padding: 0;
+}
+
+#ficha-pokemon img{
+    width: 100%;
+}
+
+#estado-busqueda, #estado-ficha{
+    text-align: center;
+}
+
+.error{
+    color: rgb(255, 220, 220);
+    font-weight: bold;
+}
+
+#estado-ficha.error{
+    color: rgb(204, 0, 0);
+}
+
+@media (min-width: 768px){
+    #listado-pokemon{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px){
+    #listado-pokemon{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
